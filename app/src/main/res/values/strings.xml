@@ -4,4 +4,6 @@
     <string name="button">Button</string>
     <string name="enter">Enter</string>
     <string name="todo">TODO</string>
+    <string name="logo">logo</string>
+    <string name="register">Register</string>
 </resources>
