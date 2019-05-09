@@ -3,4 +3,5 @@
     <string name="enter_name">Enter Name</string>
     <string name="button">Button</string>
     <string name="enter">Enter</string>
+    <string name="todo">TODO</string>
 </resources>

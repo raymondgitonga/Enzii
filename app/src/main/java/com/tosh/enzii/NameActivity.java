@@ -3,7 +3,7 @@ package com.tosh.enzii;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class nameActivity extends AppCompatActivity {
+public class NameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
