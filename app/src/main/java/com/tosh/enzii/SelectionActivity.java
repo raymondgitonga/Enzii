@@ -24,7 +24,7 @@ public class SelectionActivity extends AppCompatActivity {
             "Senator in Sh400m gold scam involving UAE royal family",
             "Fire erupts again in Mt Kenya Forest in suspected arson",
             "Tanzanian arrested for selling daughter for body parts",
-            "Julius Malema fires revolutionary signals in South Africa's election results",
+            "Julius Malema fires revolutionary signal in South Africa's election results",
             "Local banks take Sh8 billion hit in KQ shares",
             "The 10 Best Travel Apps for Exploring the World"};
 
