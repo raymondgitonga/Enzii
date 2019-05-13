@@ -5,15 +5,16 @@ This is a news app, it provides the user with latest and current news on what is
 Raymond Gitonga
 
 ## Description and Usage
-This appusing text input fields and toasts prompts you to register using your name, after which it directs you to the next activity where all the news
+This app using text input fields and toasts prompts you to register using your name, after which it directs you to the next activity where all the news
 are displayed using grid view, the app also makes use of butter knife.
 
-![](screenshots/screenshot1.png)
+
 ### This is the splash screen
 ![](screenshots/screenshot2.png)
 ### Here the app request for you to register using your name
 ![](screenshots/screenshot3.png)
 ### Here the app welcomes you and shows you all the days news
+![](screenshots/screenshot1.png)
 
 
 
