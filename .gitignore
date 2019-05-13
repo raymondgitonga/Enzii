@@ -13,7 +13,7 @@
 .externalNativeBuild
 settings.gradle
 /.gradle
-gradlelew
-gradlew.bat
-gradle.properties
+/gradlelew
+/gradlew.bat
+/gradle.properties
 
