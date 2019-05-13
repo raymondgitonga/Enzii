@@ -17,8 +17,6 @@ public class SelectionActivity extends AppCompatActivity {
 
     @BindView(R.id.nameView) TextView nameView;
     @BindView(R.id.newsView) ListView mNewsView;
-//    private TextView nameView;
-//    private ListView mNewsView;
     private String[] headlines = new String[] {"Petitioners: Stop Huduma Namba registration",
             "South Africa demonstrated elections can be peaceful",
             "Ignore summons at your own peril, Senate warns governors",
@@ -35,9 +33,6 @@ public class SelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-
-//        nameView =(TextView) findViewById(R.id.nameView);
-//        mNewsView = (ListView) findViewById(R.id.newsView);
         ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, headlines);
