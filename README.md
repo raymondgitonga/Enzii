@@ -23,7 +23,7 @@ are displayed using grid view, the app also makes use of butter knife.
 |---	|---	|---	|
 |Enter Name  	|User enters their name and clicks enter|Toast displaying welcome, a text view with their name is displayed in the next activity, and all the days news|
 
-##Getting Started
+## Getting Started
 In order for you to be able to run the application you must fulfill the following requirements:
 
 Android phone/emulator must be at least at SDK level 22 in order to run the application.
