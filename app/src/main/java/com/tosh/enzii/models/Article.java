@@ -1,13 +1,13 @@
 package com.tosh.enzii.models;
 
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import javax.xml.transform.Source;
 
 class Article {
 
-    @SerializedName("source")
+    @SerializedName("Source")
     @Expose
     private Source source;
 
@@ -35,13 +35,31 @@ class Article {
     @Expose
     private String publishedAt;
 
-    public Article(Source source, String author, String title, String description, String url, String urlToImage, String publishedAt) {
+    public void setSource(Source source) {
         this.source = source;
+    }
+
+    public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public void setTitle(String title) {
         this.title = title;
+    }
+
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setUrl(String url) {
         this.url = url;
+    }
+
+    public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
+    }
+
+    public void setPublishedAt(String publishedAt) {
         this.publishedAt = publishedAt;
     }
 
