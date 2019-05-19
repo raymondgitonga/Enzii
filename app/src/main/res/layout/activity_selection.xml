@@ -34,7 +34,21 @@
         android:layout_marginTop="50dp"
         android:layout_alignParentStart="true"
         android:ems="10"
-        android:hint="Search News"/>
+        android:hint="Search News"
+        android:background="@drawable/search_background"
+        android:padding="10dp"
+        android:layout_toStartOf="@id/search_btn"/>
+
+    <ImageButton
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/search_field"
+        android:layout_alignTop="@id/search_field"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="60dp"
+        app:srcCompat="@drawable/round_search_black_24"
+        android:background="@android:color/transparent"/>
 
 
 </RelativeLayout>
