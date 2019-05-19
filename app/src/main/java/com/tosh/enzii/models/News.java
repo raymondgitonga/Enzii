@@ -18,5 +18,21 @@ public class News {
     @Expose
     private List<Article> article;
 
+    public News(String status, int totalResult, List<Article> article) {
+        this.status = status;
+        this.totalResult = totalResult;
+        this.article = article;
+    }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public int getTotalResult() {
+        return totalResult;
+    }
+
+    public List<Article> getArticle() {
+        return article;
+    }
 }
