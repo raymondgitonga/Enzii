@@ -3,7 +3,7 @@ package com.tosh.enzii.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class   Source {
+public class Source {
 
     @SerializedName("id")
     @Expose

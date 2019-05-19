@@ -12,4 +12,9 @@
     <string name="search_news">Search News</string>
     <string name="todo1">TODO1</string>
     <string name="search_button">search button</string>
+    <string name="news_image">news image</string>
+    <string name="shadow">shadow</string>
+    <string name="author">author</string>
+    <string name="title">Title</string>
+    <string name="source">Source</string>
 </resources>
