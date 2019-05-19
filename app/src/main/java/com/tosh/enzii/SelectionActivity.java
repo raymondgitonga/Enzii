@@ -24,9 +24,6 @@ public class SelectionActivity extends AppCompatActivity {
 
     @BindView(R.id.nameView) TextView nameView;
 
-    @BindView(R.id.search_field) EditText searchField;
-    @BindView(R.id.search_btn) ImageButton searchButton;
-    @BindView(R.id.result_list) RecyclerView resultList;
 
 
     @Override
@@ -40,7 +37,7 @@ public class SelectionActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
-        nameView.setText("Welcome " + name +"!");
+        nameView.setText("Welcome " + name +"! Your Top Headlines");
 
 
     }

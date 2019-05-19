@@ -1,74 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectionActivity">
+    tools:context=".SelectionActivity"
+    android:background="@color/colorBackground">
 
-    <TextView
-        android:id="@+id/nameView"
-        android:layout_width="242dp"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/textview"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.012" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/search_field"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentStart="true"
-        android:ems="10"
-        android:hint="@string/search_news"
-        android:background="@drawable/search_background"
-        android:padding="10dp"
-        android:layout_toStartOf="@id/search_btn"
-        android:inputType=""
-        android:importantForAutofill="no" tools:targetApi="o" />
 
-    <ImageButton
-        android:id="@+id/search_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/search_field"
-        android:layout_alignBottom="@id/search_field"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="60dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/search_button"
-        app:srcCompat="@drawable/round_search_black_24" />
-
-    <RelativeLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/search_field"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/result_list"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-        </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:id="@+id/nameView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textview"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginLeft="16dp"
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylcer_view"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
 
 
-
-    </RelativeLayout>
-
-
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
