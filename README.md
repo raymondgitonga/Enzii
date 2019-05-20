@@ -8,12 +8,7 @@ Raymond Gitonga
 This app using text input fields and toasts prompts you to register using your name, after which it directs you to the next activity where all the news
 are displayed using grid view, the app also makes use of butter knife.
 
-![](screenshots/screenshot1.png)
-### This is the splash screen
-![](screenshots/screenshot2.png)
-### Here the app request for you to register using your name
-![](screenshots/screenshot3.png)
-### Here the app welcomes you and shows you all the days news
+![](screenshots/gif.gif)
 
 
 
@@ -21,7 +16,7 @@ are displayed using grid view, the app also makes use of butter knife.
 ## BDD
 |Behaviour   	|  Input  	|   Output	|
 |---	|---	|---	|
-|Enter Name  	|User enters their name and clicks enter|Toast displaying welcome, a text view with their name is displayed in the next activity, and all the days news|
+|Open App  	|App displays splash screen activity after which the Main activity is shown|Scrollable list of the days news are displayed|
 
 ## Getting Started
 In order for you to be able to run the application you must fulfill the following requirements:
