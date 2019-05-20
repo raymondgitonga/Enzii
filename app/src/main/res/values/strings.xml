@@ -17,4 +17,11 @@
     <string name="author">author</string>
     <string name="title">Title</string>
     <string name="source">Source</string>
+    <string name="headlines">Headlines</string>
+    <string name="top_headlines">Top Headlines</string>
+    <string name="_01_january_1990">01 January 1990</string>
+    <string name="desc">Desc</string>
+    <string name="time">Time</string>
+    <string name="image1">image1</string>
+    <string name="author1">Author</string>
 </resources>

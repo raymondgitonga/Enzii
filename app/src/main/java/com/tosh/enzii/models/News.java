@@ -18,9 +18,15 @@ public class News {
     @Expose
     private List<Article> article;
 
-    public News(String status, int totalResult, List<Article> article) {
+    public void setStatus(String status) {
         this.status = status;
+    }
+
+    public void setTotalResult(int totalResult) {
         this.totalResult = totalResult;
+    }
+
+    public void setArticle(List<Article> article) {
         this.article = article;
     }
 

@@ -15,6 +15,16 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            buildConfigField 'String', "ApiKey", News_ApiKey
+            resValue 'string', "api_key", News_ApiKey
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', "ApiKey", News_ApiKey
+            resValue 'string', "api_key", News_ApiKey
+        }
     }
     testOptions {
         unitTests {
@@ -51,4 +61,8 @@ android {
 //Times Formater
         implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
     }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
 }

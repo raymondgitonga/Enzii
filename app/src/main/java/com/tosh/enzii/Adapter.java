@@ -40,22 +40,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType ) {
         View view = LayoutInflater.from(context).inflate(R.layout.item,  viewGroup,  false);
         return new MyViewHolder(view, onItemClickListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int position) {
         final MyViewHolder holder = viewHolder;
-        Article model = articles.get(i);
+        Article model = articles.get(position);
 
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions.placeholder(Utils.getRandomDrawableColor());
-        requestOptions.error(Utils.getRandomDrawableColor());
+        requestOptions.placeholder(Utils.getRandomDrawbleColor());
+        requestOptions.error(Utils.getRandomDrawbleColor());
         requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL);
         requestOptions.centerCrop();
-        requestOptions.timeout(3000);
+
+
+
 
         Glide.with(context)
                 .load(model.getUrlToImage())
@@ -78,7 +80,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         holder.title.setText(model.getTitle());
         holder.desc.setText(model.getDescription());
-        holder.source.setText(model.getSource().getName());
+//        holder.source.setText(model.getSource().getName());
         holder.time.setText(" \u2022 " + Utils.DateFormat(model.getPublishedAt()));
         holder.published_ad.setText(Utils.DateFormat(model.getPublishedAt()));
         holder.author.setText(model.getAuthor());
@@ -105,10 +107,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         TextView title, desc, author, published_ad, source, time;
         ImageView imageView;
         ProgressBar progressBar;
-
         OnItemClickListener onItemClickListener;
 
-        public MyViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
+        public MyViewHolder(View itemView, OnItemClickListener onItemClickListener) {
             super(itemView);
 
             itemView.setOnClickListener(this);
@@ -125,7 +126,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         }
 
         @Override
-        public void onClick(View v) {
+        public void onClick(View v)  {
             onItemClickListener.onItemClick(v, getAdapterPosition());
         }
     }

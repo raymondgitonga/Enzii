@@ -1,5 +1,6 @@
 package com.tosh.enzii;
 
+
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 
@@ -25,7 +26,7 @@ public class Utils {
                     new ColorDrawable(Color.parseColor("#d93947"))
             };
 
-    public static ColorDrawable getRandomDrawableColor() {
+    public static ColorDrawable getRandomDrawbleColor() {
         int idx = new Random().nextInt(vibrantLightColorList.length);
         return vibrantLightColorList[idx];
     }
