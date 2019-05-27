@@ -8,11 +8,8 @@
 
 
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <LinearLayout
+            android:id="@+id/top"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -38,8 +35,29 @@
             </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    </android.support.v4.widget.NestedScrollView>
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="559dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/sign_out"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
 
 
 </android.support.design.widget.CoordinatorLayout>

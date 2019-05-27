@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "573758313715",
+    "firebase_url": "https://enzii-1b3c3.firebaseio.com",
+    "project_id": "enzii-1b3c3",
+    "storage_bucket": "enzii-1b3c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573758313715:android:5f25608f7d74c6c2",
+        "android_client_info": {
+          "package_name": "com.tosh.enzii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573758313715-kh8bqvaugi8vc12df8up9aagbko4k26r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tosh.enzii",
+            "certificate_hash": "37ec8aafc1b0e5cdb837479fad4d88819a305f7c"
+          }
+        },
+        {
+          "client_id": "573758313715-i5dv3vjobffr5s9n7kbtrfcl2khf5vuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACp2jnTXhRxZtdJ42QKlZz4AkfiqH-ldc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573758313715-i5dv3vjobffr5s9n7kbtrfcl2khf5vuo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
