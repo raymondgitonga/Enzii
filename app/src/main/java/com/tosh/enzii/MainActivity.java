@@ -77,29 +77,29 @@ public class MainActivity extends AppCompatActivity{
 
         setContentView(R.layout.activity_selection);
 
-        btnSignOut = (Button) findViewById(R.id.btnSignOut);
+//        btnSignOut = (Button) findViewById(R.id.btnSignOut);
 
-        btnSignOut.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AuthUI.getInstance()
-                        .signOut(MainActivity.this)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                btnSignOut.setEnabled(false);
-                                showSignInOption();
-
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MainActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT)
-                                .show();
-                    }
-                });
-            }
-        }));
+//        btnSignOut.setOnClickListener((new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AuthUI.getInstance()
+//                        .signOut(MainActivity.this)
+//                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<Void> task) {
+//                                btnSignOut.setEnabled(false);
+//                                showSignInOption();
+//
+//                            }
+//                        }).addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Toast.makeText(MainActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT)
+//                                .show();
+//                    }
+//                });
+//            }
+//        }));
 
 
         recyclerView = findViewById(R.id.recylcer_view);
@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity{
                 AuthUI.getInstance().createSignInIntentBuilder()
                 .setAvailableProviders(providers)
                 .setTheme(R.style.MyTheme)
+                .setLogo(R.drawable.logo)
                 .build(),
                 MY_REQUEST_CODE
         );
@@ -137,7 +138,7 @@ public class MainActivity extends AppCompatActivity{
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 Toast.makeText(this, ""+ user.getEmail(), Toast.LENGTH_SHORT).show();
 
-                btnSignOut.setEnabled(true);
+//                btnSignOut.setEnabled(true);
             }else{
                 Toast.makeText(this, ""+response.getError().getMessage(), Toast.LENGTH_SHORT)
                 .show();
@@ -173,6 +174,7 @@ public class MainActivity extends AppCompatActivity{
                     adapter = new Adapter(articles, MainActivity.this);
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
+                    initListener();
 
                 } else {
                     Toast.makeText(MainActivity.this, "No Result!", Toast.LENGTH_SHORT).show();
@@ -185,6 +187,24 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+    }
+    private void initListener(){
+
+        adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(MainActivity.this, NewsDetailActivity.class);
+                Article article = articles.get(position);
+                intent.putExtra("url", article.getUrl());
+                intent.putExtra("title", article.getTitle());
+                intent.putExtra("img", article.getUrlToImage());
+                intent.putExtra("date", article.getPublishedAt());
+//                intent.putExtra("source", article.getSource().getName());
+                intent.putExtra("author", article.getAuthor());
+
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -219,7 +239,22 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-        return true;
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_logout){
+            logout();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void logout(){
+        FirebaseAuth.getInstance().signOut();
+        showSignInOption();
     }
 
 }

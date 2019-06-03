@@ -12,8 +12,20 @@
 
     </style>
 
-    <style name="MyTheme" parent="AppTheme">
-        <item name="android:windowBackground">@android:color/white</item>
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:windowBackground">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="MyAppLayoutTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlHighlight">@color/colorAccent</item>
     </style>
 
 
