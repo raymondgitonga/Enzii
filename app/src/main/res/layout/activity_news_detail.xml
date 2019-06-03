@@ -13,8 +13,7 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:fitsSystemWindows="true"
-       >
+        android:fitsSystemWindows="true">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -116,7 +115,8 @@
         android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:background="@color/colorBackground"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -200,6 +200,7 @@
     <FrameLayout
         android:id="@+id/date_behavior"
         app:layout_anchor="@+id/appbar"
+        app:behavior_autoHide="true"
         android:adjustViewBounds="true"
         app:layout_anchorGravity="right|end|bottom"
         android:clickable="false"
